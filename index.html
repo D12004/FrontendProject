@@ -17,7 +17,7 @@
 
 			body {
 				font-family: 'Poppins', Arial, sans-serif;
-				background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+				background: black;
 				min-height: 100vh;
 				line-height: 1.6;
 				color: #333;
@@ -168,6 +168,7 @@
 	</head>
 	<body>
 		<div id="app" class="container">
+			<!--Title-->
 			<h1>{{ displayTheCart ? 'Shopping Cart' : 'Lessons in Dubai (Available)' }}</h1>
 
 			<button @click="triggerTheCart" :disabled="!displayTheCart && cart.length === 0">{{ cart.length }} {{ displayTheCart ? 'Return to Lessons' : 'Checkout' }}</button>
