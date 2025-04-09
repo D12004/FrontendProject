@@ -297,7 +297,7 @@
 							lessons: Object.values(totalLessonsCounts),
 						};
 
-						fetch('http://localhost:3000/orders', {
+						fetch('https://backend-project-4u26.onrender.com/orders', {
 							method: 'POST',
 							headers: {
 								'Content-Type': 'application/json',
@@ -316,7 +316,7 @@
 									const newLesson = this.lessons.find((l) => l.id === lesson.id);
 
                                     if (newLesson) {
-										fetch('http://localhost:3000/lessons', {
+										fetch('https://backend-project-4u26.onrender.com/lessons', {
 											method: 'PUT',
 											headers: {
 												'Content-Type': 'application/json',
@@ -365,7 +365,7 @@
 						this.displayTheCart = !this.displayTheCart;
 					},
 					fetchLessons() {
-						fetch('http://localhost:3000/lessons')
+						fetch('https://backend-project-4u26.onrender.com/lessons')
 							.then((res) => res.json())
 							.then((data) => {
 								this.lessons = data;
@@ -378,7 +378,7 @@
 					},
 					queryTheSearch() {
 						const queryWithEncoding = encodeURIComponent(this.queryForSearch);
-						fetch(`http://localhost:3000/search?search_query=${queryWithEncoding}`)
+						fetch(`https://backend-project-4u26.onrender.com/search?search_query=${queryWithEncoding}`)
 							.then((res) => res.json())
 							.then((data) => {
 								this.lessons = data;
